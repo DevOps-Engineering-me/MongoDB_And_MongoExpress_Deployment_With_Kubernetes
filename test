@@ -1,0 +1,19 @@
+minikube start --vm-driver=virtualbox
+
+1) kubectl apply -f mongo-secret.yaml
+2) kubectl get secret 
+3) kubectl apply -f mongo.yaml
+4) kubectl get all ### 
+5) kubectl get pod
+6) kubectl get service
+7) kubectl describe service mongodb-service
+8) kubectl apply -f mongo-configmap.yaml
+9) kubectl apply -f mongo-express.yaml
+10) kubectl get pod // finding the mongo-express delpoyment name
+    kubectl logs <mongo-express pod mane>
+
+after add external-service.
+11) kubectl apply -f mongo-express.yaml
+12) kubectl get service (checking external-service are created or not)
+
+13) minikube service mongo-express-service
